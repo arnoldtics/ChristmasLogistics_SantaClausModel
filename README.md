@@ -5,6 +5,7 @@ A graph-based model to simulate Santa Claus's gift delivery on Christmas Eve.
 
 ## Author and Contact
 - Arnoldo Fernando Chue Sánchez: arnoldwork20@gmail.com
+- Diego Maldonado Castro: diegomaldonadocastro1805@gmail.com
 
 ## License
 GNU General Public License v3.0
