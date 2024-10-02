@@ -21,9 +21,10 @@ This project simulates Santa Claus's gift delivery logistics on Christmas Eve us
 ## Objectives
 
 - Try to simulate all of Santa's required metrics in order to "realistically" make christmas happen.
+- Make use of graph structures to represent a city and its houses.
 - Make use of the best path possible for route optimization through graph search algorithms sucj as A*.
 - Use physics formulas to replicate Santa's job journey as down to earth as possible.
-- Take into account real life problems such as weight, speed and force necessary to move Santa's sleigh.
+- Take into account real life problems such as weight, speed and force necessary to move Santa's sleigh. 
 
 
 ## Mathematical and computational tools
