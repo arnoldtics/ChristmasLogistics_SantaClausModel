@@ -6,6 +6,7 @@ A graph-based model to simulate Santa Claus's gift delivery on Christmas Eve.
 ## Author and Contact
 - Arnoldo Fernando Chue Sánchez: arnoldwork20@gmail.com
 - Diego Maldonado Castro: diegomaldonadocastro1805@gmail.com
+- Ana Paola Carreón Hernández: anapcahe@gmail.com
 
 ## License
 GNU General Public License v3.0
@@ -22,10 +23,21 @@ This project simulates Santa Claus's gift delivery logistics on Christmas Eve us
 
 - Try to simulate all of Santa's required metrics in order to "realistically" make christmas happen.
 - Make use of graph structures to represent a city and its houses.
-- Make use of the best path possible for route optimization through graph search algorithms sucj as A*.
+- Make use of the best path possible for route optimization through graph search algorithms such as A*.
 - Use physics formulas to replicate Santa's job journey as down to earth as possible.
 - Take into account real life problems such as weight, speed and force necessary to move Santa's sleigh. 
 
 
 ## Mathematical and computational tools
-
+1. Graph Representation:
+Use NetworkX to represent the city as a graph where nodes are houses and edges are the paths between them. 
+2. Pathfinding Algorithms:
+Implement the A* algorithm for route optimization. This will allow Santa to find the shortest or most efficient path through the graph, minimizing travel time.
+3. Physics Modeling:
+Basic physics equations (like Newton's laws) to simulate Santa's sleigh dynamics.To calculate factors such as:
+Force = Mass × Acceleration to determine how much thrust is needed.
+Weight (consider gifts and sleigh) affecting speed and distance.
+5. Metrics Simulation:
+Calculate total distance traveled, time taken, and the impact of weight on speed.
+6. Real-life Constraints:
+Factor in realistic constraints like time zones, varying weather conditions, and potential obstacles that could impact the journey.
