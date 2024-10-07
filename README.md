@@ -21,23 +21,18 @@ This project simulates Santa Claus's gift delivery logistics on Christmas Eve us
 
 ## Objectives
 
-- Try to simulate all of Santa's required metrics in order to "realistically" make christmas happen.
-- Make use of graph structures to represent a city and its houses.
-- Make use of the best path possible for route optimization through graph search algorithms such as A*.
-- Use physics formulas to replicate Santa's job journey as down to earth as possible.
-- Take into account real life problems such as weight, speed and force necessary to move Santa's sleigh. 
-
+- Represent the delivery points for Santa's route with a fully connected graph.
+- Implement each node of the graph with the corresponding information for the model: coordinates and the number of Christmas gifts.
+- Implement a search algorithm to find an efficient path for Santa's route in the graph
+- Use constant speed to create a visualization of Santa's trajectory across the entire graph
+- Determine the initial conditions of the model in order to make Christmas happen.
 
 ## Mathematical and computational tools
 1. Graph Representation:
-Use NetworkX to represent the city as a graph where nodes are houses and edges are the paths between them. 
+Implement classes in C++ for nodes and the graph. C++ is an ideal language for creating fast object-oriented structures and algorithms.
 2. Pathfinding Algorithms:
-Implement the A* algorithm for route optimization. This will allow Santa to find the shortest or most efficient path through the graph, minimizing travel time.
+Implement the A* algorithm for route optimization. The heuristic will be chosen based on the results from the testing phase. This part will also be implemented in C++.
 3. Physics Modeling:
-Basic physics equations (like Newton's laws) to simulate Santa's sleigh dynamics.To calculate factors such as:
-Force = Mass × Acceleration to determine how much thrust is needed.
-Weight (consider gifts and sleigh) affecting speed and distance.
-5. Metrics Simulation:
-Calculate total distance traveled, time taken, and the impact of weight on speed.
-6. Real-life Constraints:
-Factor in realistic constraints like time zones, varying weather conditions, and potential obstacles that could impact the journey.
+In the initial approach, we will assume a constant speed for Santa's sleigh and use Euclidean geometry to calculate the distances between nodes.
+4. Visualization
+The visualization should display Santa's route across the graph. This will be implemented in Python, as it provides excellent tools for creating visualizations easily.
