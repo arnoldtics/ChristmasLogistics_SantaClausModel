@@ -25,7 +25,7 @@ This project simulates Santa Claus's gift delivery logistics on Christmas Eve us
 - Implement each node of the graph with the corresponding information for the model: coordinates and the number of Christmas gifts.
 - Implement a search algorithm to find an efficient path for Santa's route in the graph
 - Use constant speed to create a visualization of Santa's trajectory across the entire graph
-- Determine the initial conditions of the model in order to make Christmas happen.
+- Determine the initial conditions of the model in order to prove if Christmas could happen.
 
 ## Mathematical and computational tools
 1. Graph Representation:
