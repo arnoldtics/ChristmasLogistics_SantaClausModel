@@ -12,11 +12,33 @@ class Graph{
     private:
         unordered_map<string, Node> nodes;
 
-        // Euclidean distance between two states
+        // Function that converts degrees to radians
+        float deg_to_rad(float deg){
+            return deg * (M_PI / 180.0);
+        }
+
         float distance(string state1, string state2){
             Node node1 = nodes[state1];
             Node node2 = nodes[state2];
-            return sqrt(pow(node1.get_latitude() - node2.get_latitude(), 2) + pow(node1.get_longitude() - node2.get_longitude(), 2));
+
+            // Radius of the Earth in kilometers (average)
+            const float R = 6371.0;
+
+            // Convertion of the coordinates to radians
+            float lat1 = deg_to_rad(node1.get_latitude());
+            float lon1 = deg_to_rad(node1.get_longitude());
+            float lat2 = deg_to_rad(node2.get_latitude());
+            float lon2 = deg_to_rad(node2.get_longitude());
+
+            // Haversine Formula
+            float dlat = lat2 - lat1;
+            float dlon = lon2 - lon1;
+            float a = sin(dlat / 2) * sin(dlat / 2) + cos(lat1) * cos(lat2) * sin(dlon / 2) * sin(dlon / 2);
+            float c = 2 * atan2(sqrt(a), sqrt(1 - a));
+
+            // Distance in km
+            float distance = R * c;
+            return distance;
         }
 
     public:
