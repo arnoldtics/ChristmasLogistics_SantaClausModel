@@ -16,7 +16,7 @@ class Graph{
         float distance(string state1, string state2){
             Node node1 = nodes[state1];
             Node node2 = nodes[state2];
-            return sqrt(((node1.get_latitude() - node2.get_latitude()), 2) + pow((node1.get_longitude() - node2.get_longitude()), 2));
+            return sqrt(pow(node1.get_latitude() - node2.get_latitude(), 2) + pow(node1.get_longitude() - node2.get_longitude(), 2));
         }
 
     public:
@@ -45,7 +45,7 @@ class Graph{
             });
 
             vector<string> closest_states;
-            for (int i = 0; i < distances.size(); i++){
+            for (size_t i = 0; i < distances.size(); i++){
                 closest_states.push_back(distances[i].first);
             }
             return closest_states;
@@ -54,7 +54,8 @@ class Graph{
 
 // Function for starting the graph
 Graph construct_graph(Graph &G){
-    for (const auto state : information){
+    for (const auto& state : information){
         G.set_node(state.first, state.second.first, state.second.second.first, state.second.second.second);
     }
+    return G;
 }
