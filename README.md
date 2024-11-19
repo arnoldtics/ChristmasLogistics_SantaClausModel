@@ -34,6 +34,6 @@ Implement classes in C++ for nodes and the graph. C++ is an ideal language for c
 2. Pathfinding Algorithms:
 Implement the A* algorithm for route optimization. The heuristic will be chosen based on the results from the testing phase. This part will also be implemented in C++.
 3. Physics Modeling:
-In the initial approach, we will assume a constant speed for Santa's sleigh and use Euclidean geometry to calculate the distances between nodes.
+In the initial approach, we will assume a constant speed for Santa's sleigh and use the Haversine formula to calculate the distances between nodes.
 4. Visualization
 The visualization should display Santa's route across the graph. This will be implemented in Python, as it provides excellent tools for creating visualizations easily.
