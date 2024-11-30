@@ -1,6 +1,4 @@
-#ifndef NODE_HPP
-#define NODE_HPP
-
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -13,8 +11,12 @@ private:
 
 public:
     // Constructor
-    Node(string n = "", float lat = 0.0f, float lon = 0.0f, int g = 0)
-        : name(n), latitude(lat), longitude(lon), gifts(g) {}
+    Node(string n = "", float lat = 0.0f, float lon = 0.0f, int g = 0){
+        name = n;
+        latitude = lat;
+        longitude = lon;
+        gifts = g;
+    }
 
     // Setter functions
     void set_name(string n) { name = n; }
@@ -28,5 +30,3 @@ public:
     float get_longitude() const { return longitude; }
     int get_gifts() const { return gifts; } // Marked as const
 };
-
-#endif

@@ -1,6 +1,3 @@
-#ifndef GRAPH_HPP
-#define GRAPH_HPP
-
 #include <iostream>
 #include <unordered_map>
 #include <string>
@@ -14,7 +11,7 @@ using namespace std;
 
 class Graph {
 private:
-    std::unordered_map<std::string, Node> nodes;
+    unordered_map<string, Node> nodes;
 
     // Convert degrees to radians
     float deg_to_rad(float deg) const {
@@ -22,9 +19,9 @@ private:
     }
 
     // Calculate distance between two states using Haversine formula
-    float distance(const std::string& state1, const std::string& state2) {
+    float distance(const string& state1, const string& state2) {
         if (nodes.find(state1) == nodes.end() || nodes.find(state2) == nodes.end()) {
-            throw std::invalid_argument("One or both states do not exist in the graph.");
+            throw invalid_argument("One or both states do not exist in the graph.");
         }
 
         Node node1 = nodes[state1];
@@ -48,7 +45,7 @@ private:
 
 public:
     // Add a node to the graph
-    void set_node(const std::string& name, int gifts, float latitude, float longitude) {
+    void set_node(const string& name, int gifts, float latitude, float longitude) {
         if (nodes.find(name) == nodes.end()) {
             Node n;
             n.set_gifts(gifts);
@@ -59,7 +56,7 @@ public:
     }
 
     // Get the number of gifts for a state
-    int get_gifts(const std::string& state) const {
+    int get_gifts(const string& state) const {
         if (nodes.find(state) != nodes.end()) {
             return nodes.at(state).get_gifts();
         }
@@ -67,56 +64,34 @@ public:
     }
 
     // Get the distance between two states
-    float get_distance(const std::string& state1, const std::string& state2) {
+    float get_distance(const string& state1, const string& state2) {
         return distance(state1, state2);
     }
 
     // Return a list of states ordered by distance to a given state
-    std::vector<std::string> closests_states(const std::string& state) {
-        std::vector<std::pair<std::string, float>> distances;
+    vector<string> closests_states(const string& state) {
+        vector<pair<string, float>> distances;
         for (const auto& node : nodes) {
             if (node.first != state) {
                 distances.push_back({node.first, distance(state, node.first)});
             }
         }
 
-        std::sort(distances.begin(), distances.end(),
-                  [](const std::pair<std::string, float>& a, const std::pair<std::string, float>& b) {
-                      return a.second < b.second;
-                  });
+        sort(distances.begin(), distances.end(), [](const pair<string, float>& a, const pair<string, float>& b){return a.second < b.second;});
 
-        std::vector<std::string> closest_states;
+        vector<string> closest_states;
         for (const auto& d : distances) {
             closest_states.push_back(d.first);
         }
         return closest_states;
     }
 
-    // Return a list of states with distances ordered by proximity
-    std::vector<std::pair<std::string, float>> closests_states_with_distances(const std::string& state) {
-        std::vector<std::pair<std::string, float>> distances;
-        for (const auto& node : nodes) {
-            if (node.first != state) {
-                distances.push_back({node.first, distance(state, node.first)});
-            }
-        }
-
-        std::sort(distances.begin(), distances.end(),
-                  [](const std::pair<std::string, float>& a, const std::pair<std::string, float>& b) {
-                      return a.second < b.second;
-                  });
-
-        return distances;
-    }
 };
 
 // Flexible function for constructing a graph
-Graph construct_graph(Graph &G, const unordered_map<string, pair<int, pair<float, float>>>& information) {
+Graph construct_graph(Graph &G) {
     for (const auto& state : information) {
         G.set_node(state.first, state.second.first, state.second.second.first, state.second.second.second);
     }
     return G;
 }
-
-
-#endif // GRAPH_HPP

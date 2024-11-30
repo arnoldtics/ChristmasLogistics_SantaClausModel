@@ -1,36 +1,36 @@
 =============================================
 | State Name      | Distance   | Gifts       |
 =============================================
-| Aguascalientes | 0.00       |       517162 |
-| Zacatecas      | 145.87     |      1117174 |
-| Guanajuato     | 185.71     |      2704946 |
-| Jalisco        | 204.79     |      3337410 |
-| San Luis Potosi| 210.25     |      1497397 |
-| Nayarit        | 258.22     |       952296 |
-| Queretaro      | 290.19     |      1298766 |
-| Michoacan      | 315.33     |      2223229 |
-| Colima         | 368.18     |       750988 |
-| Hidalgo        | 398.12     |      1581086 |
-| Estado de Mexico| 408.29     |      6115894 |
-| Durango        | 415.84     |      1194056 |
-| CDMX           | 452.25     |      2820324 |
-| Tamaulipas     | 457.45     |      1683649 |
-| Nuevo Leon     | 465.29     |      2370506 |
-| Morelos        | 499.10     |      1152367 |
-| Tlaxcala       | 521.84     |       986285 |
-| Guerrero       | 545.73     |      1878663 |
-| Puebla         | 571.98     |      2905066 |
-| Coahuila       | 588.99     |      1610726 |
-| Sinaloa        | 621.48     |      1525647 |
-| Veracruz       | 683.01     |      3159613 |
-| Oaxaca         | 837.24     |      2022844 |
-| Chihuahua      | 861.33     |      1785818 |
-| Baja California Sur| 1075.70    |       779684 |
-| Tabasco        | 1116.17    |      1379455 |
-| Sonora         | 1201.17    |      1496725 |
-| Chiapas        | 1205.51    |      2813815 |
-| Campeche       | 1298.76    |       834420 |
-| Yucatan        | 1397.60    |      1264770 |
-| Quintana Roo   | 1504.59    |      1122111 |
-| Baja California| 1583.98    |      1711104 |
+| Quintana Roo   | 0.00       |       604949 |
+| Yucatan        | 154.10     |      1352557 |
+| Campeche       | 250.84     |       922207 |
+| Tabasco        | 506.89     |      1467242 |
+| Chiapas        | 576.77     |      2901602 |
+| Veracruz       | 870.97     |      3247400 |
+| Oaxaca         | 925.93     |      2110631 |
+| Puebla         | 1029.26    |      2992853 |
+| Tlaxcala       | 1054.10    |      1074072 |
+| Hidalgo        | 1129.68    |      1668873 |
+| Morelos        | 1155.24    |      1240154 |
+| CDMX           | 1156.73    |      2908111 |
+| Tamaulipas     | 1204.06    |      1771436 |
+| Estado de Mexico| 1209.20    |      6203681 |
+| Queretaro      | 1231.95    |      1386553 |
+| Guerrero       | 1262.57    |      1966450 |
+| San Luis Potosi| 1318.49    |      1585184 |
+| Guanajuato     | 1353.26    |      2792733 |
+| Nuevo Leon     | 1385.64    |      2458293 |
+| Michoacan      | 1444.13    |      2311016 |
+| Aguascalientes | 1504.59    |      1122111 |
+| Zacatecas      | 1559.73    |      1204961 |
+| Jalisco        | 1621.89    |      3425197 |
+| Coahuila       | 1657.00    |      1698513 |
+| Colima         | 1679.06    |       838775 |
+| Nayarit        | 1757.79    |      1040083 |
+| Durango        | 1825.77    |      1281843 |
+| Sinaloa        | 2081.56    |      1613434 |
+| Chihuahua      | 2120.70    |      1873605 |
+| Sonora         | 2546.98    |      1584512 |
+| Baja California Sur| 2548.52    |       867471 |
+| Baja California| 2967.71    |      1798891 |
 =============================================

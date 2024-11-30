@@ -1,6 +1,4 @@
-#ifndef DATA_HPP  // If DATA_HPP is not already defined
-#define DATA_HPP  // Define it
-
+#include <iostream>
 #include <unordered_map>
 #include <string>
 using namespace std;
@@ -54,4 +52,3 @@ unordered_map<string, pair<int, pair<float, float>>> information = {
     {"Zacatecas", {600012, {23.28902, -102.66056}}}
 };
 
-#endif  // End of DATA_HPP guard

@@ -8,7 +8,6 @@
 #include <vector>
 #include <tuple>
 #include <string>
-#include "Data.hpp"  // Predefined `information` map
 #include <sys/stat.h> // For checking file existence
 
 
@@ -84,10 +83,10 @@ int main() {
     float speed = 300.0; // Speed in km/h
     float time_passed = 0.0;
 
-    construct_graph(G, information);
+    construct_graph(G);
 
-    // Perform BFS starting from "Aguascalientes"
-    string start_state = "Colima";
+    // Perform BFS starting from "Quintana Roo"
+    string start_state = "Quintana Roo";
     vector<tuple<string, float, int>> result = bfs(G, start_state);
 
     // Print BFS traversal distances, gifts, and time passed
