@@ -40,6 +40,24 @@ The visualization should display Santa's route across the graph. This will be im
 
 ## Development of the model
 
+### Implementation of Nodes
+
+### Graph definition
+
+### BFS Exploration
+
+Through the use of the properties graph, a BFS-like algorithm was implemented to perform graph exploration. A BFS follows these steps:
+
+1. **Exploration**: While the queue is not empty:
+   1.1. Dequeue a node from the queue and visit it (e.g., print its value).  
+   1.2. For each unvisited neighbor of the dequeued node:  
+       1.2.1. Enqueue the neighbor into the queue.  
+       1.2.2. Mark the neighbor as visited.
+
+2. **Termination**: Repeat step 1.2 until the queue is empty.
+   
+### Visualization
+
 ## Results
 
 ## Conclusions
