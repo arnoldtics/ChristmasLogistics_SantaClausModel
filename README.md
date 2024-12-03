@@ -25,15 +25,23 @@ This project simulates Santa Claus's gift delivery logistics on Christmas Eve us
 - Start with 32 nodes: each one represents a state of Mexico.
 - Implement each node of the graph with the corresponding information for the model: coordinates of tha captial and the number of Christmas gifts.
 - Implement a search algorithm to find an efficient path for Santa's route in the graph
-- Use constant speed to create a visualization of Santa's trajectory across the entire graph
+- Use constant speed and a constant of gifts deliverd to create a visualization of Santa's journey across the country.
 - Determine the initial conditions of the model in order to prove if Christmas could happen.
 
 ## Mathematical and computational tools
 1. Graph Representation:
 Implement classes in C++ for nodes and the graph. C++ is an ideal language for creating fast object-oriented structures and algorithms.
 2. Pathfinding Algorithms:
-Implement the A* algorithm for route optimization. The heuristic will be chosen based on the results from the testing phase. This part will also be implemented in C++.
+Implement the graph explorations algorithms for route optimization. The heuristics will be chosen based on the results from the testing phase. This part will also be implemented in C++.
 3. Physics Modeling:
-In the initial approach, we will assume a constant speed for Santa's sleigh and use the Haversine formula to calculate the distances between nodes.
+In the initial approach, we will assume a constant speed for Santa's sleigh, determine a constant of gifts delivered per second, and use the Haversine formula to calculate the distances between nodes.
 4. Visualization
 The visualization should display Santa's route across the graph. This will be implemented in Python, as it provides excellent tools for creating visualizations easily.
+
+## Development of the model
+
+## Results
+
+## Conclusions
+
+## References
