@@ -48,31 +48,34 @@ void save_trajectories(const vector<tuple<string, float, int>>& trajectories, co
 
 // BFS function with distance and gifts tracking
 vector<tuple<string, float, int>> bfs(Graph& G, const string& start_state) {
+    string last_state = start_state;
     vector<tuple<string, float, int>> visited_states; // State, distance, gifts
     unordered_set<string> visited;                   // To mark states as visited
-    queue<tuple<string, float, int>> to_visit;       // Queue for BFS (state, distance, gifts)
+    queue<string> to_visit;       // Queue for BFS (states)
 
     // Initialize
-    to_visit.push({start_state, 0.0f, G.get_gifts(start_state)});
-    visited.insert(start_state);
+    to_visit.push(start_state);
 
     // Start BFS
     while (!to_visit.empty()) {
-        auto [current_state, current_distance, current_gifts] = to_visit.front();
+        string current_state = to_visit.front();
         to_visit.pop();
-        visited_states.push_back({current_state, current_distance, current_gifts});
+
+        if (visited.find(current_state) != visited.end()){continue;}
+        
+        visited.insert(current_state);
+        visited_states.push_back({current_state, G.get_distance(current_state, last_state), G.get_gifts(current_state)});
+        
+        last_state = current_state;
 
         // Retrieve closest states and use them as neighbors
         vector<string> neighbors = G.closests_states(current_state);
         for (const auto& neighbor : neighbors) {
             if (visited.find(neighbor) == visited.end()) {  // If not visited
-                float distance_to_neighbor = G.get_distance(current_state, neighbor);
-                int gifts_from_neighbor = G.get_gifts(neighbor);
-                to_visit.push({neighbor, current_distance + distance_to_neighbor, 
-                               current_gifts + gifts_from_neighbor});
-                visited.insert(neighbor);
+                to_visit.push({neighbor});
             }
         }
+
     }
     return visited_states;
 }
