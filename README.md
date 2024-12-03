@@ -43,7 +43,8 @@ The visualization should display Santa's route across the graph. This will be im
 ### Implementation of Nodes
 
 ### Graph definition
-
+Through Graph.hpp we manage a collection of states (nodes) with attributes like gifts, latitude, and longitude. It provides methods to add nodes, retrieve the number of gifts for a state, calculate distances between states using the Haversine formula, and list states ordered by proximity to a given state. The construct_graph function initializes the graph using external data, ensuring each state is added with its corresponding information. This setup is ideal for analyzing geographical relationships, such as finding nearby states or planning optimized routes based on distances.
+1. **Harvesine Formula**:
 ### BFS Exploration
 
 Through the use of the properties graph, a BFS-like algorithm was implemented to perform graph exploration. A BFS follows these steps:
@@ -56,8 +57,6 @@ Through the use of the properties graph, a BFS-like algorithm was implemented to
 
 2. **Termination**: Repeat step 1.2 until the queue is empty.
    
-### Visualization
-
 ## Results
 
 ## Conclusions
