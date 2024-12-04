@@ -112,3 +112,5 @@ Overall, this project honed our technical skills and enhanced our ability to thi
 - [Child population density by federal entity](https://www.inegi.org.mx/app/tabulados/interactivos/?pxq=Poblacion_Poblacion_01_e60cd8cf-927f-4b94-823e-972457a12d4b&idrt=123&opc=t)
 - [Haversine Formula](https://www.movable-type.co.uk/scripts/latlong.html)
 - [State coordinates in latitude and longitude format](https://www.inegi.org.mx/app/mapa/espacioydatos/)
+- [Colors for Graphics](https://matplotlib.org/stable/gallery/color/named_colors.html)
+- [Speed comparison reference](https://en.wikipedia.org/wiki/Mikoyan-Gurevich_MiG-25)
