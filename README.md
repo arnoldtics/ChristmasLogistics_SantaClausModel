@@ -47,21 +47,24 @@ The `Node` class represents a state in the context of our project. Each `Node` e
 ### Graph definition
 Through `Graph.hpp` we manage a collection of states (nodes) with attributes like gifts, latitude, and longitude. It provides methods to add nodes, retrieve the number of gifts for a state, calculate distances between states using the Haversine formula, and list states ordered by proximity to a given state. The construct_graph function initializes the `Graph` using external data, ensuring each state is added with its corresponding information.
 
-1. **Havesine Formula**: The function distance implemented with this formula recieve two Nodes and change their respective coordinates to radians, define a constant R which contains the radius of the Earth defined as 6371 kilometers, calculate the difference in latitudes and longitudes and finally apply the next formula
+1. **Havesine Formula**: The function distance implemented with this formula recieve two Nodes and change their respective coordinates to radians, define a constant R which contains the radius of the Earth and calculate the difference in latitudes and longitudes to finally apply the formula
 
 $a = \sin^2\left(\frac{\Delta \text{lat}}{2}\right) + \cos(\text{lat}_1) \cdot \cos(\text{lat}_2) \cdot \sin^2\left(\frac{\Delta \text{lon}}{2}\right)$
 
 Where:
-- \(\Delta \text{lat} = \text{lat}_2 - \text{lat}_1\) is the difference in latitudes (in radians).
-- \(\Delta \text{lon} = \text{lon}_2 - \text{lon}_1\) is the difference in longitudes (in radians).
-- \(\text{lat}_1, \text{lat}_2\) are the latitudes of the two points (in radians).
-- \(\text{lon}_1, \text{lon}_2\) are the longitudes of the two points (in radians).
+- $\Delta \text{lat} = \text{lat}_2 - \text{lat}_1$ is the difference in latitudes (in radians).
+- $\Delta \text{lon} = \text{lon}_2 - \text{lon}_1$ is the difference in longitudes (in radians).
+- $\text{lat}_1, \text{lat}_2$ are the latitudes of the two points (in radians).
+- $\text{lon}_1, \text{lon}_2$ are the longitudes of the two points (in radians).
 
-Finally, the distance \(d\) in kilometers is calculated as: $d = R \cdot c$
-Where: 
+Finally, the distance $d$ in kilometers is calculated as:
+
+$d = R \cdot c$
+
+Where:
 $c = 2 \cdot \text{atan2}\left(\sqrt{a}, \sqrt{1 - a}\right)$
-$R = 6371.0$ km is the radius of the Earth.
 
+and $R = 6371.0$ km is the radius of the Earth.
 
 
 ### BFS Exploration
