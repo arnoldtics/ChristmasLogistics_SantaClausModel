@@ -45,7 +45,7 @@ The `Node` class represents a state in the context of our project. Each `Node` e
 
 
 ### Graph definition
-Through Graph.hpp we manage a collection of states (nodes) with attributes like gifts, latitude, and longitude. It provides methods to add nodes, retrieve the number of gifts for a state, calculate distances between states using the Haversine formula, and list states ordered by proximity to a given state. The construct_graph function initializes the graph using external data, ensuring each state is added with its corresponding information.
+Through `Graph.hpp` we manage a collection of states (nodes) with attributes like gifts, latitude, and longitude. It provides methods to add nodes, retrieve the number of gifts for a state, calculate distances between states using the Haversine formula, and list states ordered by proximity to a given state. The construct_graph function initializes the `Graph` using external data, ensuring each state is added with its corresponding information.
 
 1. **Harvesine Formula**:
 ### BFS Exploration
