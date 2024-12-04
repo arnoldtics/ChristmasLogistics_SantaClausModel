@@ -94,4 +94,18 @@ To reproduce this simulation or modify it with different parameters, follow thes
 
 ## Conclusions
 
+# Project Overview  
+
+This project deepened our understanding of **graph theory** and **problem-solving in simulated environments**. We tackled the challenge of grounding a fictional scenario by incorporating realistic variables such as graph density, real-world location mapping, sleigh speed, and the number of gifts.  
+
+A major obstacle was calculating distances between coordinates, which we resolved using the **Haversine formula**. Overcoming this and other challenges allowed us to effectively integrate real-world variables into our solutions.  
+
+Some of the skills developed during the realization of the project were:  
+- **Efficient Simulations:** Implemented in **C++** for fast and reliable model testing.  
+- **Data Management:** Organized data into structured files for easier analysis.  
+- **Visualization:** Developed tools to interpret results clearly and communicate findings.  
+
+Overall, this project honed our technical skills and enhanced our ability to think critically and creatively in applying theory to fictional problems.  
+
+
 ## References
