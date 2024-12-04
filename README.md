@@ -47,7 +47,9 @@ The `Node` class represents a state in the context of our project. Each `Node` e
 ### Graph definition
 Through `Graph.hpp` we manage a collection of states (nodes) with attributes like gifts, latitude, and longitude. It provides methods to add nodes, retrieve the number of gifts for a state, calculate distances between states using the Haversine formula, and list states ordered by proximity to a given state. The construct_graph function initializes the `Graph` using external data, ensuring each state is added with its corresponding information.
 
-1. **Harvesine Formula**:
+1. **Harvesine Formula**: $d = 2r \cdot \arctan\left(\frac{\sqrt{1 - a}}{a}\right)$ siendo $a = \sin^2\left(\frac{\Delta \varphi}{2}\right) + \cos(\varphi_1) \cdot \cos(\varphi_2) \cdot \sin^2\left(\frac{\Delta \lambda}{2}\right)$
+
+
 ### BFS Exploration
 
 Through the use of the properties graph, a BFS-like algorithm was implemented to perform graph exploration. A BFS follows these steps:
@@ -108,4 +110,4 @@ Overall, this project honed our technical skills and enhanced our ability to thi
 
 ## References
 - [Densidad poblacional infantil por entidad federativa](https://www.inegi.org.mx/app/tabulados/interactivos/?pxq=Poblacion_Poblacion_01_e60cd8cf-927f-4b94-823e-972457a12d4b&idrt=123&opc=t)
-- [Harversine Formula](https://en.wikipedia.org/wiki/Haversine_formula)
+- [Harversine Formula](https://www.movable-type.co.uk/scripts/latlong.html))
