@@ -49,7 +49,7 @@ for i, line in enumerate(lines):
 
 # Parameters
 traveling = 0.833 # km per second / 3000 km/hr / Mach 2.83 Airplane MiG-25 Foxbat
-delivering = 1400 # gifts per second -> 28000 Christmas elves -> 20 seconds per gift
+delivering = 1400 # gifts per second -> 56000 Christmas elves -> 40 teams of 1400 elves -> 20 seconds per gift and 20 seconds to rest and prepare for next gift 
 
 # control
 time, gift, total_distance = 0, 0, 0

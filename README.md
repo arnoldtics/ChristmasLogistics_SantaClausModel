@@ -41,6 +41,8 @@ The visualization should display Santa's route across the graph. This will be im
 ## Development of the model
 
 ### Implementation of Nodes
+The `Node` class represents a state in the context of our project. Each `Node` encapsulates key attributes related to a state (name, gifts (given by the number of habitants between 0 and 19 years old), latitude, and longitude (both in degrees)) and provides getter and setter methods for managing these attributes. The main purpose of the `Node` class is to serve as a foundational element in our graph representation, where nodes correspond to states with specific geographical and logistical properties.
+
 
 ### Graph definition
 Through Graph.hpp we manage a collection of states (nodes) with attributes like gifts, latitude, and longitude. It provides methods to add nodes, retrieve the number of gifts for a state, calculate distances between states using the Haversine formula, and list states ordered by proximity to a given state. The construct_graph function initializes the graph using external data, ensuring each state is added with its corresponding information.
@@ -51,6 +53,7 @@ Through Graph.hpp we manage a collection of states (nodes) with attributes like 
 Through the use of the properties graph, a BFS-like algorithm was implemented to perform graph exploration. A BFS follows these steps:
 
 1. **Exploration**: While the queue is not empty:
+
    1.1. Dequeue a node from the queue and visit it (e.g., print its value).  
    1.2. For each unvisited neighbor of the dequeued node:  
        1.2.1. Enqueue the neighbor into the queue.  
@@ -59,6 +62,35 @@ Through the use of the properties graph, a BFS-like algorithm was implemented to
 2. **Termination**: Repeat step 1.2 until the queue is empty.
    
 ## Results
+The model introduces three free parameters:
+
+- Start_state: The state where Santa's journey begins.
+- Traveling: The constant speed of Santa's sleigh in km/s.
+- Delivering: The number of gifts delivered per second
+
+Due to Mexico's geographical position, the starting point was chosen as Quintana Roo, as it is the first state to experience nighttime during Christmas Eve.
+
+The values for Traveling and Delivering were determined through extensive testing of the model. Given that Christmas Eve lasts approximately 13 hours in Mexico, this was set as the time limit for completing all deliveries. The initial conditions that ensured a successful delivery were 0.833 km/s for traveling speed and 1400 gifts delivered per second.
+
+This result is remarkable because it demonstrates that Santa's mission is feasible within this context. A speed of 0.833 km/s translates to 3000 km/h, or approximately Mach 2.83. The airplane MiG-25 Foxbat is able to reach this speed (a supersonic interceptor and reconnaissance aircraft that is among the fastest military aircraft to enter service. Designed by the Soviet Union).
+
+The delivery rate of 1400 gifts per second can be justified as follows: Santa Claus is not alone; he is accompanied by his team of Christmas Elves. Assuming 56,000 elves, divided into 40 teams (each with 1400 elves), the delivery rate is achievable. If each elf in a team delivers one gift in 20 seconds and prepares the next gift in another 20 seconds, with perfect synchronization, they can collectively deliver 1400 gifts per second in each state.
+
+After running this simulation (delivering and traveling among the path finded by our graph exploration), the following information was plotted.
+
+![Plotting the amount of gifts delivered each second](img/Plotting%20the%20amount%20of%20gifts%20delivered%20each%20second.png)
+
+![Plotting distance traveled each second](img/Plotting%20distance%20traveled%20each%20second.png)
+
+
+## Testing and execution
+
+To reproduce this simulation or modify it with different parameters, follow these steps:
+
+1. Set the Mexican state where Santa's journey will start by editing line 92 of main.cpp.
+2. Compile the program into an executable file named main.exe. You can either use a CMake file or compile it manually.
+3. Run the main.exe file. This will generate a trajectories.txt file containing the simulation results.
+4. Execute visualization.py to generate the plots. If you wish to modify the Traveling or Delivering parameters, edit lines 51 and 52 of visualization.py.
 
 ## Conclusions
 
