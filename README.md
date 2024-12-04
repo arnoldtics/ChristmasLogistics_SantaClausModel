@@ -107,3 +107,5 @@ Overall, this project honed our technical skills and enhanced our ability to thi
 
 
 ## References
+- [Datos Poblacionales por Estado](https://www.inegi.org.mx/app/tabulados/interactivos/?pxq=Poblacion_Poblacion_01_e60cd8cf-927f-4b94-823e-972457a12d4b&idrt=123&opc=t)
+- [Harversine Formula](https://en.wikipedia.org/wiki/Haversine_formula)
